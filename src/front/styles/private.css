@@ -1,0 +1,46 @@
+.private-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 1s ease;
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+                 0 0 20px rgba(255, 255, 255, 0.6),
+                 0 0 30px rgba(255, 255, 255, 0.5),
+                 0 0 40px rgba(255, 0, 0, 0.4),
+                 0 0 70px rgba(255, 0, 0, 0.3),
+                 0 0 80px rgba(255, 0, 0, 0.2),
+                 0 0 100px rgba(255, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 4rem;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+                     0 0 20px rgba(255, 255, 255, 0.6),
+                     0 0 30px rgba(255, 255, 255, 0.5),
+                     0 0 40px rgba(255, 0, 0, 0.4),
+                     0 0 70px rgba(255, 0, 0, 0.3),
+                     0 0 80px rgba(255, 0, 0, 0.2),
+                     0 0 100px rgba(255, 0, 0, 0.1);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1),
+                     0 0 30px rgba(255, 255, 255, 0.8),
+                     0 0 40px rgba(255, 255, 255, 0.7),
+                     0 0 50px rgba(255, 0, 0, 0.6),
+                     0 0 80px rgba(255, 0, 0, 0.5),
+                     0 0 90px rgba(255, 0, 0, 0.4),
+                     0 0 110px rgba(255, 0, 0, 0.3);
+    }
+}
