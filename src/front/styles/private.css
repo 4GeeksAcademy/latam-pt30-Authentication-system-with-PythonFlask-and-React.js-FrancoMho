@@ -19,8 +19,7 @@
                  0 0 100px rgba(255, 0, 0, 0.1);
 }
 
-h1 {
-    font-size: 4rem;
+#email_welcome {
     animation: glow 1.5s infinite alternate;
 }
 

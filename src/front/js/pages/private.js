@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/private.css"; // Import the CSS for styling
@@ -26,8 +25,8 @@ export const Private = () => {
 
     return (
         <div className="private-view" style={{ backgroundColor: bgColor }}>
-            <div className="content">
-                <h1>Welcome, {store.user ? store.user.email : "User"}</h1>
+            <div className="content col-9">
+                <h1 id="email_welcome" >Welcome, {store.user ? store.user.email : "User"}</h1>
             </div>
         </div>
     );

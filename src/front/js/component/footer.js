@@ -17,7 +17,7 @@ export const Footer = () => {
 			<p>
 				Made with <i className="fa fa-heart text-danger" /> in 4 Geeks Academy
 			</p>
-			<button onClick={handleLogout} className="btn btn-light">
+			<button onClick={handleLogout} className="btn btn-sm btn-outline-secondary">
 				Logout
 			</button>
 		</footer>
