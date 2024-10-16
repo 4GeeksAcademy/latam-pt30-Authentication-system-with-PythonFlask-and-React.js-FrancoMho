@@ -50,7 +50,7 @@ export const Home = () => {
 							<option>#seccion_to_add_text_if_needed</option>
 					</div>
 				
-					<button type="submit" className="btn btn-primary">Submit</button>
+					<button type="submit" className="btn btn-primary shadow-sm">Submit</button>
 				</fieldset>
 			</form>
 		</div>

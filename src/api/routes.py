@@ -116,11 +116,11 @@ def login_user():
 
 ##PERSONALPRIVATE VIEW --- USERS only can see theirs info
 #[GET] /user/id Get user ig
-@api.route("/user/id", methods=['GET'])
+@api.route("/user/<int:id>", methods=['GET'])
 @jwt_required()
-def get_user_ig():
+def get_user_ig(id):
     user_id= get_jwt_identity()
-    user = User.query.get(user_id)
+    user = User.query.get(user_id or id)
 
     if not user:
         return jsonify({"message": "User not found"}), 400
