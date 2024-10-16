@@ -39,9 +39,15 @@ def create_user():
         }), 400
     #Email Verification
     
-    if User.query.filter_by(email=email).first():
-        return jsonify({"message": "Invalid email"}), 400
+    # if User.query.filter_by(email=email).first():
+    #     return jsonify({"message": "Invalid email"}), 400
     
+    # Verificar si el usuario ya existe
+    existing_user = User.query.filter_by(email=email).first()
+    if existing_user:
+        return jsonify({"message": "User already exists"}), 409  
+
+
     #We create new user
     new_user = User(email=email, password=password, is_active=True)
     try:

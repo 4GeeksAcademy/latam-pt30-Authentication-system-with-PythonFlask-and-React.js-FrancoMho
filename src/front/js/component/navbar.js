@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "/src/front/img/logo4.png"
+import { Context } from "../store/appContext.js";
 
 
 export const Navbar = () => {
+	const { store } = useContext(Context);
 	return (
 		<nav className="navbar navbar-dark bg-dark text-light">
 			<div className="container">
@@ -15,11 +17,19 @@ export const Navbar = () => {
 					alt="FM APP Logo" 
 					/>
 				</Link>
-				<div className="ml-auto">
+				{/* <div className="ml-auto">
 					<Link to="/login">
 						<button className="btn btn-outline-success">LOGIN</button>
 					</Link>
+				</div> */}
+				<div className="ml-auto">
+					{ !store.userToken && (
+						<Link to="/login">
+							<button className="btn btn-outline-success">LOGIN</button>
+						</Link>
+					)}
 				</div>
+
 			</div>
 		</nav>
 	);

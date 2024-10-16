@@ -22,6 +22,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					if (response.ok) {
 						setStore({ message: "User created successfully" });
 						return true
+						
+					} else if (response.status === 409) {
+						// El usuario ya existe
+						setStore({ message: "User already exists" });
+						alert("User already exists, please try logging in.");
+
 					} else {
 						setStore({ message: data.message });
 					}
